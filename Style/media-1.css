@@ -1,0 +1,56 @@
+@media (min-width :1025px) and (max-width : 1200px) {
+
+
+    body {
+        border: 5px solid peru;
+    }
+
+    /* banner section */
+
+    .banner-section .content-box .search-container {
+        display: none;
+    }
+
+    /* course category section */
+
+    .courses-section .course-categories .course-list li {
+        margin: 2% !important;
+        border-radius: 10px;
+        border: 2px solid #3DCBB1;
+        box-shadow: var(--aqua) 0px 2px 5px -1px, var(--aqua) 0px 1px 3px -1px;
+    }
+
+    .courses-section .course-categories .course-list li:hover {
+        background-color: #3DCBB1;
+    }
+
+    .courses-section .course-categories .course-list li:hover a {
+        color: white !important;
+
+    }
+
+    .courses-section .course-categories .course-list li::after {
+        display: none;
+    }
+
+    .courses-section .course-categories .course-list li::before {
+        display: none;
+    }
+
+    /* join us section */
+
+    .join-section .join-part .join-content {
+        top: 10%;
+    }
+
+    .offline-video-container .course-modules .about-promo {
+        display: none !important;
+    }
+
+    /* webinar */
+    .webinar-section .webinar-part-1 .webinar-video .webinar-img-title .control .content {
+        left: 5%;
+        right: 5%;
+    }
+
+}

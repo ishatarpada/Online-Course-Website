@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-aqua : #3DCBB1
+}
+
+.model-section{
+    width: 100% !important;
+    margin: 5% auto;
+}
+
+.model-section .explore-img{
+    height: 250px;
+    width: 250px;
+}
+
+.model-section .explore-img .check-icon a{
+    color: var(--bg-aqua);
+}
+
+
+.model-section .explore-img .check-icon{
+    display: none;
+}
+
+.model-section #okBtn{
+    background-color: var(--bg-aqua);
+}

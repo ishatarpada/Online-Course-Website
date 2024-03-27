@@ -1,0 +1,201 @@
+@media (min-width :320px) and (max-width : 480px) {
+
+    body{
+        border: 5px solid purple;
+    }
+    /* header section start */
+
+    .main-container .header-container {
+        top: 0 !important;
+        margin: 0% !important;
+        background-color: white !important;
+        box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+    }
+
+    .main-container .header-container nav {
+        width: 100%;
+        margin: auto;
+    }
+
+    .main-container .header-container .navbar .phone-icons{
+        display: block !important;
+    }
+
+    .main-container .header-container .navbar .logo-name {
+        color: black !important;
+    }
+
+    .main-container .header-container .navbar .menu-name {
+        color: black !important;
+        margin: 10px !important;
+        padding: 5px !important;
+    }
+
+    .main-container .header-container .navbar .menu-name i {
+        color: black !important;
+    }
+
+    .main-container .header-container .navbar .menu-name span {
+        color: black !important;
+    }
+
+    .main-container .header-container .navbar .search-box{
+        margin: 10px !important;
+    }
+
+    .main-container .header-container .navbar .icons{
+        display: block !important;
+        margin: 10px !important;
+    }
+
+    .main-container .header-container .navbar .icons a{
+        color: black !important;
+    }
+
+    .main-container .header-container .navbar .user-info{
+        height: 50px;
+        width: 50px;
+        margin: 10px !important;
+    }
+
+    .main-container .header-container .navbar .user-info .dropdown-menu-end{
+        left: 0 !important;
+        right: auto !important;
+    }
+
+    .main-container .banner-content {
+        left: 5%;
+        right: 5%;
+    }
+
+    .main-container .search-section {
+        display: none;
+    }
+
+    /* header section end */
+
+    /* continue watching section start*/
+
+    .continue-section .continue-watching-part .continue-img {
+        height: 240px;
+        width: 325px;
+    }
+
+    /* continue watching section end*/
+
+
+    /* course category section start */
+
+    .courses-section .course-categories .course-list li {
+        margin: 2% !important;
+        border-radius: 10px;
+        border: 2px solid #3DCBB1;
+        box-shadow: var(--aqua) 0px 2px 5px -1px, var(--aqua) 0px 1px 3px -1px;
+    }
+
+    .courses-section .course-categories .course-list li:hover {
+        background-color: #3DCBB1;
+    }
+
+    .courses-section .course-categories .course-list li:hover a {
+        color: white !important;
+
+    }
+
+    .courses-section .course-categories .course-list li::after {
+        display: none;
+    }
+
+    .courses-section .course-categories .course-list li::before {
+        display: none;
+    }
+
+    /* course category section end */
+
+    /* trending course section start */
+
+    .courses-section .course-video-boxs .video-box {
+        width: 390px;
+    }
+    
+    .courses-section .course-video-boxs .video-box .video-img {
+        height: 250px;
+        width: 385px;
+    }
+
+    /* trending course section end */
+
+
+    /* join us section start*/
+
+    .join-section {
+        display: none;
+    }
+
+    /* join us section end*/
+
+
+    /* offline-unpaid video section start*/
+
+    .offline-video-container {
+        width: 100% !important;
+    }
+
+    .offline-video-container .offline-video-info {
+        display: none;
+    }
+
+    .offline-video-container .offline-course-video {
+        height: 300px;
+    }
+
+    .offline-video-container .offline-course-details .offline-course-part1 {
+        height: 300px;
+    }
+
+    .offline-video-container .offline-course-details .offline-course-part2 {
+        display: none;
+    }
+
+    .offline-video-container .course-modules .about-course-module .offline-video-info {
+        display: block;
+    }
+
+    .offline-video-container .course-modules .about-promo {
+        display: none !important;
+    }
+
+    .offline-video-container .course-modules .about-course-module .channel-info .comment-icon p {
+        font-size: 16px !important;
+    }
+
+    /* offline-unpaid video section end*/
+
+
+    /* webinar start*/
+    .webinar-section .webinar-part-1 .webinar-charge {
+        display: none;
+    }
+
+    .webinar-section .webinar-part-1 .webinar-progress {
+        display: none;
+    }
+
+    .webinar-section .webinar-part-2 .webinar-promo {
+        display: none;
+    }
+
+    .webinar-section .webinar-part-1 .webinar-video .webinar-img-title .control .content {
+        top: 30%;
+        bottom: 20%;
+        left: 5%;
+        right: 5%;
+    }
+
+    .webinar-section .webinar-part-1 .webinar-video .webinar-img-title .control .live-control .control-icon {
+        width: 40%;
+    }
+
+    /* webinar end*/
+}

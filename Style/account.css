@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --aqua : #3DCBB1;
+    --bg-dark : #050505a1;
+}
+
+.account-container{
+    width: 90%;
+    margin: auto;
+}
+
+.account-tabMenu{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.account-tabMenu ul{
+    overflow-x: auto;
+}
+
+.account-tabMenu ul::-webkit-scrollbar{
+    width: 0;
+}
+
+.account-tabMenu li:nth-child(1) a{
+    border-bottom: 3px solid var(--aqua) !important;
+}
+
+/* .account-tabMenu ul li:hover a{
+    border-bottom: 3px solid var(--aqua) !important;
+} */
+
+.account-container .fill-details-section{
+    width: 80%;
+    margin: auto;
+}
+
+.account-container .fill-details-section .user-img{
+    width: 80px;
+    height: 80px;
+    margin-left: 43%;
+    margin-right: 45%;
+}
+
+.account-container .fill-details-section .user-img .camera-icon{
+    background-color:  var(--bg-dark);
+}
+
+.account-container .fill-details-section .save-btn{
+    background-color: var(--aqua);
+}
