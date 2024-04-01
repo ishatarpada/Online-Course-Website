@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.webinar-section{
+.webinar-section {
     margin: 0px 5px !important;
 }
 
@@ -63,49 +63,136 @@
     color: #3DCBB1;
 }
 
-.webinar-section .webinar-part-2 .webinar-course-name .webinar-channel .channel-logo img{
+.webinar-section .webinar-part-2 .webinar-course-name .webinar-channel .channel-logo img {
     object-fit: cover;
 }
 
-.webinar-section .webinar-part-2 .webinar-course-name .webinar-channel .channel-reviews i{
+.webinar-section .webinar-part-2 .webinar-course-name .webinar-channel .channel-reviews i {
     color: #3DCBB1;
 }
 
-.webinar-section .webinar-part-2 .webinar-about{
+.webinar-section .webinar-part-2 .webinar-about {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
-.webinar-section .webinar-part-2 .webinar-livechat{
+.webinar-section .webinar-part-2 .webinar-livechat {
+    display: none;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
-.webinar-section .webinar-part-2 .webinar-livechat .user-img{
+.webinar-section .webinar-part-2 .webinar-livechat .user-img {
     height: 50px;
     width: 50px;
 }
 
-.webinar-section .webinar-part-2 .webinar-livechat .user-img img{
+.webinar-section .webinar-part-2 .webinar-livechat .user-img img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.webinar-section .webinar-part-2 .webinar-livechat .user-cmt{
+.webinar-section .webinar-part-2 .webinar-livechat .user-cmt {
     width: 90%;
 }
 
-.webinar-section .webinar-part-2 .webinar-promo .webinar-bg{
+.webinar-section .webinar-part-2 .webinar-promo .webinar-bg {
     background-color: #A04AE3;
 }
 
-@media (min-width :320px) and (max-width : 480px) {
-    .header{
-        display: none !important;
+@media (min-width :1025px) and (max-width : 1200px) {
+    .webinar-section .webinar-part-1 .webinar-video .webinar-img-title .control .content {
+        left: 5%;
+        right: 5%;
     }
 }
 
-@media (min-width :481px) and (max-width : 768px) {
-    .header{
+@media (min-width :769px) and (max-width : 1024px) {
+
+    .webinar-section .webinar-part-1 .webinar-charge {
+        display: none;
+    }
+
+    .webinar-section .webinar-part-1 .webinar-video .webinar-img-title .control .content {
+        top: 30%;
+        bottom: 30%;
+        left: 5%;
+        right: 5%;
+    }
+
+    .webinar-section .webinar-part-2 .webinar-promo {
+        display: none;
+    }
+
+}
+
+
+@media (min-width :320px) and (max-width : 768px) {
+    .header-container {
         display: none !important;
+    }
+
+    .webinar-section {
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+
+    .webinar-section .webinar-part-1 .webinar-video {
+        height: 300px;
+    }
+
+    .webinar-section .webinar-part-1 .webinar-video .webinar-img-title {
+        height: 300px;
+    }
+
+    .webinar-section .webinar-part-1 .webinar-video .webinar-img-title .control {
+        height: 300px;
+    }
+
+    .webinar-section .webinar-part-1 .webinar-video .webinar-img-title .control .bg-img {
+        height: 300px;
+    }
+
+    .webinar-section .webinar-part-1 .webinar-video .webinar-img-title .control .content {
+        top: 7% !important;
+    }
+
+    .webinar-section .webinar-part-1 .webinar-video .webinar-img-title .control .content .buy-btn{
+        width: 40% !important;
+    }
+
+    .webinar-section .webinar-part-1 .webinar-video .webinar-img-title .control .professor-img {
+        bottom: 25%;
+    }
+
+    .webinar-section .webinar-part-1 .webinar-charge {
+        display: none;
+    }
+
+    .webinar-section .webinar-part-1 .webinar-progress {
+        display: none;
+    }
+
+    .webinar-section .webinar-part-2 .webinar-promo {
+        display: none;
+    }
+
+    .webinar-section .webinar-part-1 .webinar-video .webinar-img-title .control .content {
+        top: 30%;
+        bottom: 20%;
+        left: 5%;
+        right: 5%;
+    }
+
+    .webinar-section .webinar-part-1 .webinar-video .webinar-img-title .control .live-control .control-icon {
+        width: 40%;
+    }
+
+    .webinar-section .webinar-part-2 .webinar-course-name {
+        padding: 0px !important;
+    }
+
+    .webinar-section .webinar-part-2 .webinar-course-name .course-name {
+        font-size: 1.3rem !important;
+        margin-left: 0% !important;
     }
 }

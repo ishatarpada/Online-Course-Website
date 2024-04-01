@@ -6,27 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unpaid Offline Videos</title>
 
-    <!-- main css style link -->
-    <link rel="stylesheet" href="Style/style.css">
-
-    <!-- paid-offline video css style link -->
-    <link rel="stylesheet" href="Style/unpaid-offline.css">
-
-    <!-- header css file -->
-    <link rel="stylesheet" href="Style/header.css">
-
-    <!-- css for large screen -->
-    <link rel="stylesheet" href="Style/media-1.css">
-
-    <!-- css for Laptops screen -->
-    <link rel="stylesheet" href="Style/media-2.css">
-
-    <!-- css for Tablets screen -->
-    <link rel="stylesheet" href="Style/media-3.css">
-
-    <!-- css for Mobile screen -->
-    <link rel="stylesheet" href="Style/media-4.css">
-
     <!-- css bootstrap link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -35,8 +14,17 @@
     <!-- bootstrap icon link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- font-awesome link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- main css style link -->
+    <link rel="stylesheet" href="Style/style.css">
+
+    <!-- unpaid-offline video css style link -->
+    <link rel="stylesheet" href="Style/unpaid-offline.css">
+
+    <!-- header css file -->
+    <link rel="stylesheet" href="Style/header.css">
+
+    <!-- media query css file -->
+    <link rel="stylesheet" href="Style/media-query.css">
 
 </head>
 
@@ -44,294 +32,580 @@
 
 
     <!-- header section -->
-    <div class="header">
-        <div class="container-fluid header-container bg-body-tertiary d-flex justify-content-center align-items-center p-0">
+    <div class="header-container">
+        <nav class="navbar navbar-expand-xl">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-animation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+                <a class="navbar-brand fw-bold logo-name" href="#">
+                    <img src="Assests/course.png" alt="Logo" width="50" height="50"
+                        class="d-inline-block align-text-top">
+                    MyCourses.io
+                </a>
+                <div class="phoneIcons mx-auto mt-2 d-flex justify-content-center align-items-center me-0">
+                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header border border-0">
+                                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Notification
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-footer d-flex justify-content-between">
+                                    <p class="fw-bold fs-4">Turn on the notification</p>
+                                    <button class="btn btn-transparent" data-bs-target="#exampleModalToggle2"
+                                        data-bs-toggle="modal">
+                                        <div class="form-check form-switch border border-0">
+                                            <input class="form-check-input" id="form-check-input" type="checkbox"
+                                                role="switch" id="flexSwitchCheckDefault">
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 fw-bold" id="exampleModalToggleLabel2">
+                                        Notification
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="notification-title d-flex justify-content-between mb-2">
+                                        <p class="p-0 m-0">
+                                            <a href="#" class="text-decoration-none text-light"><i
+                                                    class="bi bi-bell-fill text-warning me-3 fs-4"></i></a>
+                                            <span class="fw-bolder fs-4">Important Reminders</span>
+                                        </p>
+                                        <button
+                                            class="btn btn-danger rounded-circle fw-bold text-light fs-4 py-0 px-2 text-center ">
+                                            4 </button>
+                                    </div>
+                                    <div class="notification-box mt-5">
+                                        <div class="notification my-3 row">
+                                            <div
+                                                class="notification-img me-2 col-2 d-flex justify-content-center align-items-center">
+                                                <img src="Assests/assignment.png" alt="" class="bg-warning img-fluid">
+                                            </div>
+                                            <div class="notification-info col-8 fw-medium">
+                                                <p class="fw-bold fs-5 m-0 p-0">Assignment</p>
+                                                <p class="m-0 p-0 text-dark-emphasis">Please Note that your
+                                                    assignment is incomplete</p>
+                                            </div>
+                                            <div
+                                                class="notification-file col-1 d-flex justify-content-center align-items-center">
+                                                <a href="#" class="text-decoration-none text-secondary"><i
+                                                        class="bi bi-arrow-right-circle fs-3 ms-1"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="notification my-3 row">
+                                            <div
+                                                class="notification-img me-2 col-2 d-flex justify-content-center align-items-center">
+                                                <img src="Assests/assignment.png" alt="" class="bg-danger img-fluid">
+                                            </div>
+                                            <div class="notification-info col-8 fw-medium">
+                                                <p class="fw-bold fs-5 m-0 p-0">Project</p>
+                                                <p class="m-0 p-0 text-dark-emphasis">Please Note that your Project
+                                                    is incomplete</p>
+                                            </div>
+                                            <div
+                                                class="notification-file col-1 d-flex justify-content-center align-items-center">
+                                                <a href="#" class="text-decoration-none text-secondary"><i
+                                                        class="bi bi-arrow-right-circle fs-3 ms-1"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="notification my-3 row">
+                                            <div
+                                                class="notification-img me-2 col-2 d-flex justify-content-center align-items-center">
+                                                <img src="Assests/assignment.png" alt="" class="bg-success img-fluid">
+                                            </div>
+                                            <div class="notification-info col-8 fw-medium">
+                                                <p class="fw-bold fs-5 m-0 p-0">Course</p>
+                                                <p class="m-0 p-0 text-dark-emphasis">Please Note that your Course
+                                                    is incomplete</p>
+                                            </div>
+                                            <div
+                                                class="notification-file col-1 d-flex justify-content-center align-items-center">
+                                                <a href="#" class="text-decoration-none text-secondary"><i
+                                                        class="bi bi-arrow-right-circle fs-3 ms-1"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="notification my-3 row">
+                                            <div
+                                                class="notification-img me-2 col-2 d-flex justify-content-center align-items-center">
+                                                <img src="Assests/assignment.png" alt="" class="bg-primary img-fluid">
+                                            </div>
+                                            <div class="notification-info col-8 fw-medium">
+                                                <p class="fw-bold fs-5 m-0 p-0">Assignment</p>
+                                                <p class="m-0 p-0 text-dark-emphasis">Please Note that your
+                                                    assignment is incomplete</p>
+                                            </div>
+                                            <div
+                                                class="notification-file col-1 d-flex justify-content-center align-items-center">
+                                                <a href="#" class="text-decoration-none text-secondary"><i
+                                                        class="bi bi-arrow-right-circle fs-3 ms-1"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" id="turn-off" data-bs-target="#exampleModalToggle"
+                                        data-bs-toggle="modal">Turn off
+                                        Notification</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="btn btn-transparent text-center text-decoration-none text-secondary fw-bolder p-1"
+                        data-bs-toggle="modal" href="#exampleModalToggle" role="button" id="notification"><i
+                            class="bi bi-bell-fill fs-4 me-1"></i></a>
+                    <a href="search.html"
+                        class="btn btn-transparent text-center text-decoration-none text-secondary fw-bolder p-1"><i
+                            class="bi bi-search fs-4 me-1"></i></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
 
-            <!-- navbar section -->
-            <nav class="navbar navbar-expand-lg p-2 mx-auto bg-transparent">
-                <div class="container-fluid justify-content-center align-items-center d-flex">
-                    <a class="navbar-brand fw-bold mx-auto logo" href="#">
-                        <img src="Assests/logo.png" class="img-fluid" alt="">
-                        <span class="logo-name fs-6">MyCourse.io</span>
-                    </a>
-                    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbar1">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbar1">
-                        <!-- dropdown menu -->
-                        <ul class="navbar-nav navbar-categary mx-auto mb-2 mb-lg-0 mx-lg-4 fs-5">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <i class="bi bi-ui-radios-grid me-2 fs-6"></i>
-                                    <span class="me-2 fs-6">Category</span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-submenu dropend w-100 p-0">
-                                        <a href="#" data-bs-toggle="dropdown"
-                                            class="dropdown-item dropdown-toggle d-flex justify-content-center align-items-center">
-                                            <div class="fw-bold ms-0 me-auto">
-                                                Design
-                                                <p class="fw-normal">All About website Design of Course </p>
-                                            </div>
-                                        </a>
-                                        <ul class="dropdown-menu sub-menu">
-                                            <li>
-                                                <a href="#" class="dropdown-item">
-                                                    <div class="fw-bold me-3">
-                                                        illustration
-                                                        <p class="fw-normal">How to be great illustrator </p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown-item">
-                                                    <div class="fw-bold me-3">
-                                                        Graphic Design
-                                                        <p class="fw-normal">Make more benefits from Design </p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown-item">
-                                                    <div class="fw-bold me-3">
-                                                        UI/UX Design
-                                                        <p class="fw-normal">Make Design for website and apps </p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu dropend w-100 p-0">
-                                        <a href="#" data-bs-toggle="dropdown"
-                                            class="dropdown-item dropdown-toggle d-flex justify-content-center align-items-center">
-                                            <div class="fw-bold ms-0 me-auto">
-                                                programming
-                                                <p class="fw-normal">Website and Mobile Programming</p>
-                                            </div>
-                                        </a>
-                                        <ul class="dropdown-menu sub-menu">
-                                            <li>
-                                                <a href="#" class="dropdown-item">
-                                                    <div class="fw-bold me-3">
-                                                        illustration
-                                                        <p class="fw-normal">How to be great illustrator </p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown-item">
-                                                    <div class="fw-bold me-3">
-                                                        Graphic Design
-                                                        <p class="fw-normal">Make more benefits from Design </p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown-item">
-                                                    <div class="fw-bold me-3">
-                                                        UI/UX Design
-                                                        <p class="fw-normal">Make Design for website and apps </p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu dropend w-100 p-0">
-                                        <a href="#" data-bs-toggle="dropdown"
-                                            class="dropdown-item dropdown-toggle d-flex justify-content-center align-items-center">
-                                            <div class="fw-bold ms-0 me-auto">
-                                                Business & Marketing
-                                                <p class="fw-normal">Website and Mobile Programming</p>
-                                            </div>
-                                        </a>
-                                        <ul class="dropdown-menu sub-menu ">
-                                            <li>
-                                                <a href="#" class="dropdown-item">
-                                                    <div class="fw-bold me-3">
-                                                        illustration
-                                                        <p class="fw-normal">How to be great illustrator </p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown-item">
-                                                    <div class="fw-bold me-3">
-                                                        Graphic Design
-                                                        <p class="fw-normal">Make more benefits from Design </p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown-item">
-                                                    <div class="fw-bold me-3">
-                                                        UI/UX Design
-                                                        <p class="fw-normal">Make Design for website and apps </p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu dropend w-100 p-0">
-                                        <a href="#" data-bs-toggle="dropdown"
-                                            class="dropdown-item dropdown-toggle d-flex justify-content-center align-items-center">
-                                            <div class="fw-bold ms-0 me-auto">
-                                                Photos & Video
-                                                <p class="fw-normal">Website and Mobile Programming</p>
-                                            </div>
-                                        </a>
-                                        <ul class="dropdown-menu sub-menu">
-                                            <li>
-                                                <a href="#" class="dropdown-item">
-                                                    <div class="fw-bold me-3">
-                                                        illustration
-                                                        <p class="fw-normal">How to be great illustrator </p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown-item">
-                                                    <div class="fw-bold me-3">
-                                                        Graphic Design
-                                                        <p class="fw-normal">Make more benefits from Design </p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown-item">
-                                                    <div class="fw-bold me-3">
-                                                        UI/UX Design
-                                                        <p class="fw-normal">Make Design for website and apps </p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown-submenu dropend w-100 p-0">
-                                        <a href="#" data-bs-toggle="dropdown"
-                                            class="dropdown-item dropdown-toggle d-flex justify-content-center align-items-center">
-                                            <div class="fw-bold ms-0 me-auto">
-                                                Writing
-                                                <p class="fw-normal">Website and Mobile Programming</p>
-                                            </div>
-                                        </a>
-                                        <ul class="dropdown-menu sub-menu">
-                                            <li>
-                                                <a href="#" class="dropdown-item">
-                                                    <div class="fw-bold me-3">
-                                                        illustration
-                                                        <p class="fw-normal">How to be great illustrator </p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown-item">
-                                                    <div class="fw-bold me-3">
-                                                        Graphic Design
-                                                        <p class="fw-normal">Make more benefits from Design </p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="dropdown-item">
-                                                    <div class="fw-bold me-3">
-                                                        UI/UX Design
-                                                        <p class="fw-normal">Make Design for website and apps </p>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-    
-                        <!-- search box -->
-                        <div class="nav-item search-box w-lg-25 w-md-100 w-sm-100 mx-auto">
+                    <!-- dropdown menu -->
+                    <ul class="navbar-nav navbar-categary mx-auto mb-2 mb-lg-0 mx-lg-4 fs-5">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle rounded menu-name fw-bold px-2" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-ui-radios-grid me-2"></i>
+                                <span class="me-1">Category</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu dropend w-100 p-0">
+                                    <a href="#" data-bs-toggle="dropdown"
+                                        class="dropdown-item dropdown-toggle d-flex justify-content-center align-items-center">
+                                        <div class="fw-bold ms-0 me-auto">
+                                            Design
+                                            <p class="fw-normal">All About website Design of Course </p>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu sub-menu">
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="fw-bold me-3">
+                                                    illustration
+                                                    <p class="fw-normal">How to be great illustrator </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="fw-bold me-3">
+                                                    Graphic Design
+                                                    <p class="fw-normal">Make more benefits from Design </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="fw-bold me-3">
+                                                    UI/UX Design
+                                                    <p class="fw-normal">Make Design for website and apps </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu dropend w-100 p-0">
+                                    <a href="#" data-bs-toggle="dropdown"
+                                        class="dropdown-item dropdown-toggle d-flex justify-content-center align-items-center">
+                                        <div class="fw-bold ms-0 me-auto">
+                                            programming
+                                            <p class="fw-normal">Website and Mobile Programming</p>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu sub-menu">
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="fw-bold me-3">
+                                                    illustration
+                                                    <p class="fw-normal">How to be great illustrator </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="fw-bold me-3">
+                                                    Graphic Design
+                                                    <p class="fw-normal">Make more benefits from Design </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="fw-bold me-3">
+                                                    UI/UX Design
+                                                    <p class="fw-normal">Make Design for website and apps </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu dropend w-100 p-0">
+                                    <a href="#" data-bs-toggle="dropdown"
+                                        class="dropdown-item dropdown-toggle d-flex justify-content-center align-items-center">
+                                        <div class="fw-bold ms-0 me-auto">
+                                            Business & Marketing
+                                            <p class="fw-normal">Website and Mobile Programming</p>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu sub-menu ">
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="fw-bold me-3">
+                                                    illustration
+                                                    <p class="fw-normal">How to be great illustrator </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="fw-bold me-3">
+                                                    Graphic Design
+                                                    <p class="fw-normal">Make more benefits from Design </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="fw-bold me-3">
+                                                    UI/UX Design
+                                                    <p class="fw-normal">Make Design for website and apps </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu dropend w-100 p-0">
+                                    <a href="#" data-bs-toggle="dropdown"
+                                        class="dropdown-item dropdown-toggle d-flex justify-content-center align-items-center">
+                                        <div class="fw-bold ms-0 me-auto">
+                                            Photos & Video
+                                            <p class="fw-normal">Website and Mobile Programming</p>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu sub-menu">
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="fw-bold me-3">
+                                                    illustration
+                                                    <p class="fw-normal">How to be great illustrator </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="fw-bold me-3">
+                                                    Graphic Design
+                                                    <p class="fw-normal">Make more benefits from Design </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="fw-bold me-3">
+                                                    UI/UX Design
+                                                    <p class="fw-normal">Make Design for website and apps </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu dropend w-100 p-0">
+                                    <a href="#" data-bs-toggle="dropdown"
+                                        class="dropdown-item dropdown-toggle d-flex justify-content-center align-items-center">
+                                        <div class="fw-bold ms-0 me-auto">
+                                            Writing
+                                            <p class="fw-normal">Website and Mobile Programming</p>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu sub-menu">
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="fw-bold me-3">
+                                                    illustration
+                                                    <p class="fw-normal">How to be great illustrator </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="fw-bold me-3">
+                                                    Graphic Design
+                                                    <p class="fw-normal">Make more benefits from Design </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="fw-bold me-3">
+                                                    UI/UX Design
+                                                    <p class="fw-normal">Make Design for website and apps </p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                    <!-- search box -->
+                    <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center search-container mx-auto">
+                        <div class="nav-item w-100">
                             <form class="position-relative">
-                                <input class="form-control pe-5 bg-transparent" type="search"
-                                    placeholder="Search for Course" aria-label="Search">
+                                <input class="form-control pe-5 bg-transparent text-light" type="search"
+                                    placeholder="Search" aria-label="Search">
                                 <button
                                     class="bg-transparent p-2 position-absolute top-50 end-0 translate-middle-y border-0 text-primary-hover text-reset"
                                     type="submit">
-                                    <i class="bi bi-search fs-6"></i>
+                                    <i class="bi bi-search fs-6 "></i>
                                 </button>
                             </form>
                         </div>
-    
-                        <!-- cart and notification and account icon -->
-                        <div class="icons mx-auto mt-2 d-flex justify-content-center align-items-center">
-                            <a href="#" class="text-decoration-none text-dark"><i class="bi bi-bell-fill me-4 fs-5"></i></a>
-                            <a href="#" class="text-decoration-none text-dark"><i class="bi bi-cart me-4 fs-5"></i></a>
-                            <a href="login.html" class="text-decoration-none text-dark"><i
-                                    class="bi bi-person-circle fs-5 me-4"></i></a>
-                        </div>
                     </div>
-                </div>
-            </nav>
-    
-            <!-- user-profile -->
-            <div class="dropdown ms-0 user-info mx-auto ms-lg-0">
-                <a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside"
-                    data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="true">
-                    <img class="avatar-img rounded-circle" src="Assests/user-profile.png" alt="avatar" height="100%"
-                        width="100%">
-                </a>
-                <ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3 px-3"
-                    aria-labelledby="profileDropdown" data-bs-popper="static">
-                    <li class="px-3 mb-3">
-                        <div class="d-flex align-items-center">
-                            <div class="avatar me-3">
-                                <img class="avatar-img rounded-circle shadow" src="Assests/user-profile.png" alt="avatar">
-                            </div>
-                            <div>
-                                <a class="h6 text-decoration-none" href="#">Lori Ferguson</a>
-                                <p class="small m-0">example@gmail.com</p>
+
+                    <!-- cart and notification and account icon -->
+                    <div
+                        class="icons mx-auto mb-2 mb-lg-0 mx-lg-4 my-2 d-flex justify-content-center align-items-center">
+                        <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
+                            aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header border border-0">
+                                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Notification
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-footer d-flex justify-content-between">
+                                        <p class="fw-bold fs-4">Turn on the notification</p>
+                                        <button class="btn btn-transparent" data-bs-target="#exampleModalToggle2"
+                                            data-bs-toggle="modal">
+                                            <div class="form-check form-switch border border-0">
+                                                <input class="form-check-input" id="form-check-input" type="checkbox"
+                                                    role="switch" id="flexSwitchCheckDefault">
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#"><i class="bi bi-laptop me-4"></i>My Courses</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="bi bi-cart fa-fw me-4"></i>My Cart</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="bi bi-heart fa-fw me-4"></i>Wishlist</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#"><i class="bi bi-person fa-fw me-4"></i>Edit Profile</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-4"></i>Account Settings</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="bi bi-bell fa-fw me-4"></i>notification</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-4"></i>Help</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item bg-danger-soft-hover" href="#"><i
-                                class="bi bi-power fa-fw me-4 text-danger"></i>
-                            <span class="text-danger">Log Out</span></a></li>
-                </ul>
+                        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                            aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5 fw-bold" id="exampleModalToggleLabel2">
+                                            Notification
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="notification-title d-flex justify-content-between mb-2">
+                                            <p class="p-0 m-0">
+                                                <a href="#" class="text-decoration-none text-light"><i
+                                                        class="bi bi-bell-fill text-warning me-3 fs-4"></i></a>
+                                                <span class="fw-bolder fs-4">Important Reminders</span>
+                                            </p>
+                                            <button
+                                                class="btn btn-danger rounded-circle fw-bold text-light fs-4 py-0 px-2 text-center ">
+                                                4 </button>
+                                        </div>
+                                        <div class="notification-box mt-5">
+                                            <div class="notification my-3 row">
+                                                <div
+                                                    class="notification-img me-2 col-2 d-flex justify-content-center align-items-center">
+                                                    <img src="Assests/assignment.png" alt=""
+                                                        class="bg-warning img-fluid">
+                                                </div>
+                                                <div class="notification-info col-8 fw-medium">
+                                                    <p class="fw-bold fs-5 m-0 p-0">Assignment</p>
+                                                    <p class="m-0 p-0 text-dark-emphasis">Please Note that your
+                                                        assignment is incomplete</p>
+                                                </div>
+                                                <div
+                                                    class="notification-file col-1 d-flex justify-content-center align-items-center">
+                                                    <a href="#" class="text-decoration-none text-secondary"><i
+                                                            class="bi bi-arrow-right-circle fs-3 ms-1"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="notification my-3 row">
+                                                <div
+                                                    class="notification-img me-2 col-2 d-flex justify-content-center align-items-center">
+                                                    <img src="Assests/assignment.png" alt=""
+                                                        class="bg-danger img-fluid">
+                                                </div>
+                                                <div class="notification-info col-8 fw-medium">
+                                                    <p class="fw-bold fs-5 m-0 p-0">Project</p>
+                                                    <p class="m-0 p-0 text-dark-emphasis">Please Note that your
+                                                        Project
+                                                        is incomplete</p>
+                                                </div>
+                                                <div
+                                                    class="notification-file col-1 d-flex justify-content-center align-items-center">
+                                                    <a href="#" class="text-decoration-none text-secondary"><i
+                                                            class="bi bi-arrow-right-circle fs-3 ms-1"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="notification my-3 row">
+                                                <div
+                                                    class="notification-img me-2 col-2 d-flex justify-content-center align-items-center">
+                                                    <img src="Assests/assignment.png" alt=""
+                                                        class="bg-success img-fluid">
+                                                </div>
+                                                <div class="notification-info col-8 fw-medium">
+                                                    <p class="fw-bold fs-5 m-0 p-0">Course</p>
+                                                    <p class="m-0 p-0 text-dark-emphasis">Please Note that your
+                                                        Course
+                                                        is incomplete</p>
+                                                </div>
+                                                <div
+                                                    class="notification-file col-1 d-flex justify-content-center align-items-center">
+                                                    <a href="#" class="text-decoration-none text-secondary"><i
+                                                            class="bi bi-arrow-right-circle fs-3 ms-1"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="notification my-3 row">
+                                                <div
+                                                    class="notification-img me-2 col-2 d-flex justify-content-center align-items-center">
+                                                    <img src="Assests/assignment.png" alt=""
+                                                        class="bg-primary img-fluid">
+                                                </div>
+                                                <div class="notification-info col-8 fw-medium">
+                                                    <p class="fw-bold fs-5 m-0 p-0">Assignment</p>
+                                                    <p class="m-0 p-0 text-dark-emphasis">Please Note that your
+                                                        assignment is incomplete</p>
+                                                </div>
+                                                <div
+                                                    class="notification-file col-1 d-flex justify-content-center align-items-center">
+                                                    <a href="#" class="text-decoration-none text-secondary"><i
+                                                            class="bi bi-arrow-right-circle fs-3 ms-1"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" id="turn-off"
+                                            data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Turn off
+                                            Notification</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="m-0 d-flex align-items-center"><a
+                                class="btn btn-transparent text-decoration-none me-3 iconBtn p-0 text-dark"
+                                data-bs-toggle="modal" href="#exampleModalToggle" role="button" id="notification"><i
+                                    class="bi bi-bell-fill fs-4 me-1"></i><span
+                                    class="name fw-medium">Notification</span> </a>
+                        </p>
+                        <p class="m-0 d-flex align-items-center"><a href="wishlist-course.html"
+                                class="text-decoration-none me-3 iconBtn text-dark"><i
+                                    class="bi bi-cart fs-4 me-1"></i><span class="name fw-medium">Cart</span> </a></p>
+                        <p class="m-0 d-flex align-items-center"><a href="login.html"
+                                class="text-decoration-none me-3 iconBtn text-dark"><i
+                                    class="bi bi-person-circle fs-4 me-1"></i><span
+                                    class="name fw-medium">Account</span>
+                            </a></p>
+                    </div>
+
+                    <div class="dropdown ms-1 ms-lg-0 me-2">
+                        <a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button"
+                            data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img class="avatar-img rounded-circle" src="Assests/user-profile.png" alt="avatar">
+                        </a>
+                        <ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3"
+                            aria-labelledby="profileDropdown">
+                            <!-- Profile info -->
+                            <li class="px-3 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar me-3">
+                                        <img class="avatar-img rounded-circle shadow" src="Assests/user-profile.png"
+                                            alt="avatar">
+                                    </div>
+                                    <div>
+                                        <a class="h6 text-decoration-none" href="#">Lori Ferguson</a>
+                                        <p class="small m-0">example@gmail.com</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="All-course.html"><i class="bi bi-laptop me-4"></i>My
+                                    Courses</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-cart fa-fw me-4"></i>My
+                                    Cart</a>
+                            </li>
+                            <li><a class="dropdown-item" href="wishlist-course.html"><i
+                                        class="bi bi-heart fa-fw me-4"></i>Wishlist</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="account.html"><i class="bi bi-person fa-fw me-4"></i>Edit
+                                    Profile</a>
+                            </li>
+                            <li><a class="dropdown-item" href="account.html"><i
+                                        class="bi bi-gear fa-fw me-4"></i>Account
+                                    Settings</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-bell fa-fw me-4"></i>notification</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-4"></i>Help</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item bg-danger-soft-hover" href="#"><i
+                                        class="bi bi-power fa-fw me-4 text-danger"></i>
+                                    <span class="text-danger">Log Out</span></a></li>
+                        </ul>
+                    </div>
+
+                </div>
             </div>
-        </div>
+        </nav>
+
     </div>
 
     <!-- offline unpaid video section -->
-    <div class="offline-video-container my-3">
+    <div class="offline-video-container my-2">
         <div>
             <div class="offline-video-info p-2">
-                <p class="video-tech fw-medium m-1">Development / Mobile Engineer </p>
-                <p class="video-name fw-bold fs-4 m-1">Make Uber Clone App</p>
-                <span class="text-danger video-professor-name me-3">Steven Arnatouvic</span>
-                <a href="#" class="text-decoration-none text-dark">
+                <p class="video-tech fw-bolder m-1">Development / Mobile Engineer </p>
+                <p class="video-name fw-bold fs-3 m-1">Make Uber Clone App</p>
+                <span class="text-danger video-professor-name me-3 fw-bolder">Steven Arnatouvic</span>
+                <a href="#" class="text-decoration-none text-dark fw-bolder">
                     <i class="bi bi-star-fill text-warning me-1"></i>
                     <span class="text-secondary">4.8</span>
                     <span class="text-secondary">(1812 Ratings)</span>
                 </a>
             </div>
-            <div class="row offline-course-details my-3 mx-auto">
-                <div class="col-lg-7 offline-course-part1 mx-auto">
-                    <div class="offline-course-video position-relative">
-                        <img src="Assests/course-paid.png" alt="" height="100%" width="100%"
+            <div class="row offline-course-details my-3 mx-auto w-100">
+                <div class="col-lg-7 offline-course-part1 mx-auto rounded p-0">
+                    <div class="offline-course-video position-relative w-100">
+                        <img src="Assests/uber-clone.png" alt="" height="100%" width="100%"
                             class="position-absolute top-0 start-0">
                         <a href="#" class="position-absolute px-3 py-1">
                             <i class="bi bi-play-fill fs-2 text-danger"></i>
@@ -382,7 +656,9 @@
                                 <a href="#" class="row mx-auto text-decoration-none text-secondary">
                                     <div class="col-lg-12 mx-2 m-auto">
                                         <p class="m-0 ps-1 text-secondary">Vue Templating</p>
-                                        <span class="ps-1"><i class="bi bi-play-fill bg-secondary text-light rounded-circle p-1"></i> 12min</span>
+                                        <span class="ps-1"><i
+                                                class="bi bi-play-fill bg-secondary text-light rounded-circle p-1"></i>
+                                            12min</span>
                                     </div>
                                 </a>
                             </li>
@@ -391,7 +667,9 @@
                                 <a href="#" class="row mx-auto text-decoration-none text-secondary">
                                     <div class="col-lg-11 mx-2 m-auto">
                                         <p class="m-0 ps-1 text-secondary">Vue Forms</p>
-                                        <span class="ps-1"><i class="bi bi-play-fill bg-secondary text-light rounded-circle p-1"></i> 23min</span>
+                                        <span class="ps-1"><i
+                                                class="bi bi-play-fill bg-secondary text-light rounded-circle p-1"></i>
+                                            23min</span>
                                     </div>
                                 </a>
                             </li>
@@ -400,7 +678,9 @@
                                 <a href="#" class="row mx-auto text-decoration-none text-secondary">
                                     <div class="col-lg-11 mx-2 m-auto">
                                         <p class="m-0 ps-1 text-secondary">Vue Styling</p>
-                                        <span class="ps-1"><i class="bi bi-play-fill bg-secondary text-light rounded-circle p-1"></i> 27min</span>
+                                        <span class="ps-1"><i
+                                                class="bi bi-play-fill bg-secondary text-light rounded-circle p-1"></i>
+                                            27min</span>
                                     </div>
                                 </a>
                             </li>
@@ -409,7 +689,9 @@
                                 <a href="#" class="row mx-auto text-decoration-none text-secondary">
                                     <div class="col-lg-11 mx-2 m-auto">
                                         <p class="m-0 ps-1 text-secondary">Vue Routing</p>
-                                        <span class="ps-1"><i class="bi bi-play-fill bg-secondary text-light rounded-circle p-1"></i> 1h 30min</span>
+                                        <span class="ps-1"><i
+                                                class="bi bi-play-fill bg-secondary text-light rounded-circle p-1"></i>
+                                            1h 30min</span>
                                     </div>
                                 </a>
                             </li>
@@ -418,7 +700,9 @@
                                 <a href="#" class="row mx-auto text-decoration-none text-secondary">
                                     <div class="col-lg-11 mx-2 m-auto">
                                         <p class="m-0 ps-1 text-secondary">Vue Animation</p>
-                                        <span class="ps-1"><i class="bi bi-play-fill bg-secondary text-light rounded-circle p-1"></i> 1h 10min</span>
+                                        <span class="ps-1"><i
+                                                class="bi bi-play-fill bg-secondary text-light rounded-circle p-1"></i>
+                                            1h 10min</span>
                                     </div>
                                 </a>
                             </li>
@@ -430,9 +714,10 @@
 
         <div class="row course-modules my-3">
 
-            <div class="col-lg-8 about-course-module">
-                <div class="channel-info row m-auto p-1">
-                    <div class="channel-name col-6 d-flex p-0">
+            <div class="col-lg-8 about-course-module p-0">
+                <h1 class="vdo-name fs-4 fw-bold bg-body-tertiary px-3 py-2">Make Uber Clone App</h1>
+                <div class="channel-info d-flex m-auto p-1">
+                    <div class="channel-name d-flex flex-nowrap p-0">
                         <div class="channel-logo" style="height: 50px; width: 50px;">
                             <img src="Assests/Channel-logo.png" class="img-fluid me-3" alt="" height="100%"
                                 width="100%">
@@ -442,25 +727,25 @@
                             <span class="m-0 text-secondary">Design Studio</span>
                         </div>
                     </div>
-                    <div class="comment-icon col-4 m-auto justify-content-end text-end d-flex">
+                    <div class="comment-icon m-auto justify-content-end text-end d-flex flex-nowrap ">
                         <p class="me-3 my-0 text-secondary"><i class="bi bi-person-circle me-2"></i>2.3k</p>
                         <p class="my-0 text-secondary"><i class="bi bi-chat-right-text-fill me-2"></i>1.4k</p>
                     </div>
                 </div>
 
-                <div class="about-list my-3">
-                    <ul class="d-flex m-0">
-                        <li class="mx-3 border-bottom border-danger border-2">
+                <div class="about-list p-0 my-3">
+                    <ul class="d-flex flex-nowrap m-0 p-0 ps-1">
+                        <li class="border-bottom border-danger border-2 mx-3" id="description-list">
                             <a href="#description" class="text-decoration-none text-dark fs-6">
                                 Description
                             </a>
                         </li>
-                        <li class="mx-3">
+                        <li class="mx-3" id="course-list">
                             <a href="#course" class="text-decoration-none text-dark fs-6">
                                 Course
                             </a>
                         </li>
-                        <li class="mx-3">
+                        <li class="mx-3" id="reviews-list">
                             <a href="#reviews" class="text-decoration-none text-dark fs-6">
                                 Reviews
                             </a>
@@ -1079,7 +1364,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="course-review my-5 p-4 d-none" id="reviews">
+                <div class="course-review my-5 p-4" id="reviews">
                     <div class="review d-flex">
                         <div class="user-img me-3">
                             <img src="Assests/review-1.png" alt="" class="rounded-circle" height="100%" width="100%">
@@ -1174,7 +1459,7 @@
             <div class="col-lg-3 m-auto footer-logo">
                 <div class="container-fluid justify-content-center align-items-center d-flex">
                     <a class="navbar-brand fw-bold mx-auto logo" href="#">
-                        <img src="Assests/logo.png" class="img-fluid me-2" alt="">
+                        <img src="Assests/course.png" class="img-fluid me-2" alt="">
                         <span class="logo-name text-light fw-bolder">MyCourse.io</span>
                     </a>
                 </div>
@@ -1236,8 +1521,6 @@
         </div>
     </footer>
 
-
-
     <!-- js external link -->
     <script src="Script/main.js"></script>
 
@@ -1245,15 +1528,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script> -->
 </body>
 
 </html>

@@ -5,7 +5,7 @@
 }
 
 .offline-video-container {
-    width: 90%;
+    width: 98%;
     margin: auto;
 }
 
@@ -14,16 +14,16 @@
 }
 
 .offline-video-container .offline-course-video {
-    height: 550px;
+    height: 500px;
 }
 
 
 .offline-video-container .offline-course-details .offline-course-part1 {
-    height: 550px;
+    height: 500px;
 }
 
 .offline-video-container .offline-course-details .offline-course-part2 {
-    height: 550px;
+    height: 500px;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
@@ -32,7 +32,7 @@
 }
 
 .offline-video-container .offline-course-details .offline-course-part2 .course-list-details {
-    height: 430px;
+    height: 380px;
     overflow-y: auto;
 }
 
@@ -66,6 +66,10 @@
     color: white;
 }
 
+.offline-video-container .course-modules .vdo-name{
+    display: none;
+}
+
 .offline-video-container .course-modules .about-course-module .channel-info .channel-name {
     width: 60%;
 }
@@ -80,6 +84,14 @@
 
 .offline-video-container .course-modules .about-course-module .channel-info .comment-icon i {
     color: #3DCBB1;
+}
+
+.offline-video-container .course-modules .about-course-module .about-course-list{
+    display: none;
+}
+
+.offline-video-container .course-modules .about-course-module .course-review{
+    display: none;
 }
 
 .offline-video-container .course-modules .about-course-module .about-list ul {
@@ -190,14 +202,95 @@
     color: #3DCBB1;
 }
 
-@media (min-width :320px) and (max-width : 480px) {
-    .header{
+
+@media (min-width :769px) and (max-width : 1024px) {
+    
+    .offline-video-container .offline-course-video {
+        height: 450px;
+    }
+
+    .offline-video-container .offline-course-details .offline-course-part1 {
+        height: 450px;
+    }
+
+    .offline-video-container .offline-course-details .offline-course-part2 {
+        height: 450px;
+    }
+
+    .offline-video-container .offline-course-details .offline-course-part2 .course-list-details {
+        height: 280px;
+    }
+
+    .offline-video-container .offline-course-details .blocker-course-part {
+        display: none;
+    }
+
+    .offline-video-container .course-modules .about-promo {
         display: none !important;
     }
+
 }
 
-@media (min-width :481px) and (max-width : 768px) {
-    .header{
+@media (min-width :320px) and (max-width : 768px) {
+    .header-container{
         display: none !important;
+    }
+
+    .offline-video-container{
+        margin: 0px !important;
+        padding: 0px !important;
+        width: 100% !important;
+    }
+
+    .offline-video-container .offline-course-details{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+
+    .offline-video-container .offline-video-info {
+        display: none;
+    }
+
+    .offline-video-container .offline-course-video {
+        height: 300px;
+        margin: 0 !important;
+    }
+
+    .offline-video-container .offline-course-details .offline-course-part1 {
+        height: 300px;
+    }
+
+    .offline-video-container .offline-course-details .offline-course-part2 {
+        display: none;
+    }
+
+    .offline-video-container .course-modules{
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .offline-video-container .course-modules .vdo-name{
+        display: block;
+    }
+
+    .offline-video-container .course-modules .about-list{
+        padding: 0px !important;
+    }
+
+    .offline-video-container .course-modules .about-course-description{
+       padding: 5px !important;
+    }
+
+    .offline-video-container .course-modules .about-course-module .offline-video-info {
+        display: block;
+    }
+
+    .offline-video-container .course-modules .about-promo {
+        display: none !important;
+    }
+
+    .offline-video-container .course-modules .about-course-module .channel-info .comment-icon p {
+        font-size: 16px !important;
     }
 }
